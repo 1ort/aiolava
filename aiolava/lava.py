@@ -80,7 +80,7 @@ class Lava:
         Args:
             account (str): Номер кошелька, с которого совершается вывод
             amount (float): Сумма вывода
-            service (str): Сервис вывода
+            service (str): Сервис вывода Пример: card
             wallet_to (str): Номер счета получателя
             order_id (Optional[str], optional): Номер счета в вашей системе. Должен быть уникальным
             hook_url (Optional[HttpUrl], optional): Url для отправки webhook (Max: 500). Defaults to None.
@@ -347,7 +347,7 @@ class Lava:
                     "expire": 1636983503,
                     // Сумма счета
                     "sum": "100.00",
-                    // Ко��ментарий
+                    // Комментарий
                     "comment": "На бигтести с колой",
                     // Статус счета
                     "status": "success",
