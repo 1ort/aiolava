@@ -19,4 +19,20 @@ print(ping_result)
 all_wallets = await client.wallet_list()
 print(all_wallets)
 ```
+## Exception handling
+[See error codes](https://dev.lava.ru/errors)
+```
+from aiolava import Lava, LavaError
 
+client = Lava(token)
+try:
+	all_wallets = await client.wallet_list()
+	all_transfers = await client.transactions_list(
+		transfer_type='transfer',
+		account=all_wallets[0].get('account'),
+	)
+	print(all_transfers)
+except LavaError as e:
+	print(e)
+```
+`> {'status': 'error', 'message': 'Invalid token', 'code': 5}`
