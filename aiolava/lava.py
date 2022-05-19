@@ -37,11 +37,11 @@ class Lava:
         path = "/test/ping"
         return await self._request(method, path)
 
-    async def wallet_list(self) -> Dict | list:
+    async def wallet_list(self) -> List:
         """Список кошельков с их балансами
 
         Returns:
-            Dict|list: [
+            List: [
                         {
                             "account": "U10000002",
                             "currency": "USD",
