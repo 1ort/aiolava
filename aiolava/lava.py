@@ -414,6 +414,6 @@ class Lava:
             ) as responce:
                 result = await responce.json()
                 if result is Dict and result.get("status") == "error":
-                    raise LavaError(f'{result["code"]}: {result["messge"]}')
+                    raise LavaError(f'{result["code"]}: {result["message"]}')
                 else:
                     return result
