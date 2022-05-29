@@ -413,7 +413,7 @@ class Lava:
                 method, url, headers=headers, data=data
             ) as responce:
                 result = await responce.json()
-                if result is Dict and result.get("status") == "error":
+                if isinstance(result, dict) and result.get("status") == "error":
                     raise LavaError(f'{result["code"]}: {result["message"]}')
                 else:
                     return result
