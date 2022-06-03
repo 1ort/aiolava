@@ -4,7 +4,7 @@ Async API wrapper for lava.ru
 
 ## Quickstart
 1. Copy `aiolava/` folder into your project
-2. Install dependencies `pip install -r aiolava/rerequirements.txt`
+2. Install dependencies `pip install -r aiolava/requirements.txt`
 3. See examples
 4. Read the [documentation](https://dev.lava.ru/). All methods have same names as their urls(`https://api.lava.ru/test/ping` is equal to `Lava.test_ping()` etc.)
 
